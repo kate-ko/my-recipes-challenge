@@ -90,7 +90,7 @@ var RecipeApp = function () {
                         '<div class="input-group-prepend">' +
                             '<span class="add-ingredients input-group-text" id="basic-addon3">Add Ingredients</span>' +
                         '</div>' + 
-                        '<input type="text" class="form-control" id="new-ingredient" aria-describedby="basic-addon3">' +
+                        '<input type="text" class="form-control new-ingredient" aria-describedby="basic-addon3">' +
                         '<div class="input-group-append">' +
                         '<button class="btn btn-outline-secondary add-ingredient" type="button">Send</button>' +
                         '</div>' +
@@ -129,7 +129,7 @@ $('.add-recipe').on('click', function(){
 
 //create ingredient
 $('.recipes').on('click','.add-ingredient', function() {
-    var name = $(this).closest('.recipe').find('#new-ingredient').val();
+    var name = $(this).closest('.recipe').find('.new-ingredient').val();
     app.createIngredients(this, name);
     app.renderRecipes();
 });
